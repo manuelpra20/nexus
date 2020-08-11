@@ -1,0 +1,27 @@
+<div class="row">
+
+    <div class="col">
+        <h1 class="container bg-dark text-white text-center  my-4 py-4"> Directiva *ngIf</h1>
+        <hr>
+        <div *ngIf="mostrar" class="card text-white bg-primary mb-3" style="width:100%;">
+            <div class="card-body">
+                <h5 class="card-title">{{frase.autor}}</h5>
+                <p class="card-text">{{frase.mensaje}}</p>
+            </div>
+        </div>
+        <button (click)="mostrar = !mostrar" class="animated fadeIn btn btn-outline-primary btn-block">Mostrar/Ocultar</button>
+    </div>
+
+
+    <div class="col">
+        <h1 class="container bg-dark text-white text-center  my-4 py-4"> Directiva *ngFor</h1>
+        <hr>
+        <ul class="list-grup">
+            <li *ngFor="let personaje of personajes; let i=index" class="list-group-item">
+                {{ i+1 }} - {{personaje}}
+            </li>
+
+        </ul>
+    </div>
+</div>
+<hr class="br-dark">
